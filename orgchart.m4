@@ -24,6 +24,7 @@ box invisible wid BoxWid ht BoxHt "$1" "$2" dnl
 define(Manager,`
 $1:
 Employee($1,$2,$3)
+ifelse($# == 5,1,Group($1,$4,$5))
 ')
 
 define(Employee,`
@@ -33,6 +34,8 @@ move right (lasttierlen/eval($3 - 1))
 move up (DownLineHt + BoxHt)
 right
 ')
+
+define(Directs,`Employee($1,$2,$3)')
 
 define(GroupDone,`
 move up (DownLineHt + BoxHt)
@@ -80,30 +83,22 @@ Manager(Wright,Cloud, 8)
 Employee(Thornewell,Sr Architect, 8)
 Employee(Pruitt,Architect, 8)
 Manager(Pope,Virt Sys, 8)
-Manager(Goziker,Sr Mgr, 8)
-Manager(Karagianes,Sr Mgr, 8)
-Manager(Pak,Test Mgr, 8)
+Manager(Goziker,Sr Mgr, 8,Control Plane,11 FTE)
+Manager(Karagianes,Sr Mgr, 8,Web UI,11 FTE)
+Manager(Pak,Test Mgr, 8,VE Test,9 FTE)
 Manager(McCardle,TMM, 8)
-Group(Karagianes,Web UI,11 FTE)
-Group(Pak,VE Test,9 FTE)
-Group(Goziker,Control Plane,11 FTE)
 
 BuildTierLine(Pope,1,2)
-Employee(VE/vCMP Dev,7 FTE,2)
-Manager(Lahti,Test Mgr,2)
-Group(Lahti,VE/vCMP/CP Test,7 FTE)
+Directs(VE/vCMP Dev,7 FTE,2)
+Manager(Lahti,Test Mgr,2,VE/vCMP/CP Test,7 FTE)
 
 BuildTierLine(Wright,1,3.5)
-Manager(Blood,Sr Mgr,3)
-Manager(Moshiri,Mgr,3)
-Manager(Comer,Sr Mgr,2)
-Group(Blood,Cloud Dev,5 FTE)
-Group(Moshiri,Cloud Sol,9 FTE)
-Group(Comer,Tech Pubs,8 FTE)
+Manager(Blood,Sr Mgr,3,Cloud Dev,5 FTE)
+Manager(Moshiri,Mgr,3,Cloud Sol 9 FTE)
+Manager(Comer,Sr Mgr,2,Tech Pubs, 8 FTE)
 
 BuildTierLine(McCardle,1,2)
-Employee(TMM Dev,10 FTE,2)
-Manager(Lato,Test Mgr,2)  # yes, this is a hack
-Group(Lato,TMM Dev/Test,4 FTE) 
+Directs(TMM Dev,10 FTE,2)
+Manager(Lato,Test Mgr,2,TMM Dev/Test,4 FTE)
 
 .PE
