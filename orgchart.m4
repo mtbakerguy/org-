@@ -82,35 +82,3 @@ TierLine($3,$2,$4)
 
 define(NullCall,`')
 divert(0)
-
-.PS
-SetTop
-Box(Knotwell,Perf & Virt) at center of last box
-TierLine(TopLineLen,0,8)
-Manager(Wright,Cloud,`NullCall')
-Employee(Thornewell,Sr Architect)
-Employee(Pruitt,Architect)
-Manager(Pope,Virt Sys,`NullCall')
-Manager(Goziker,Sr Mgr,`Group',Control Plane,11 FTE)
-Manager(Karagianes,Sr Mgr,`Group',Web UI,11 FTE)
-Manager(Pak,Test Mgr,`Group',VE Test,9 FTE)
-Manager(McCardle,TMM,`NullCall')
-CollectGDiversion()
-
-BuildTierLine(Pope,1,2,2)
-Directs(VE/vCMP Dev,7 FTE)
-Manager(Lahti,Test Mgr,`Group',VE/vCMP/CP Test,7 FTE)
-CollectGDiversion()
-
-BuildTierLine(Wright,1,3.5,3)
-Manager(Blood,Sr Mgr,`Group',Cloud Dev,5 FTE)
-Manager(Moshiri,Mgr,`Group',Cloud Sol,9 FTE)
-Manager(Comer,Sr Mgr,`Group',Tech Pubs, 8 FTE)
-CollectGDiversion()
-
-BuildTierLine(McCardle,1,2,2)
-Directs(TMM Dev,10 FTE)
-Manager(Lato,Test Mgr,`Group',TMM Dev/Test,4 FTE)
-CollectGDiversion()
-
-.PE
