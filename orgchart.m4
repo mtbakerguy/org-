@@ -33,6 +33,16 @@ box invisible wid BoxWid ht BoxHt "$1" "$2" dnl
 # useful for collating processing but inserting the results later
 define(CollectGDiversion,`undivert(100)')
 
+define(Stagger,`
+DownLine
+DownLine
+$1($2,`$3',$4)
+move up (2 * DownLineHt)
+')
+
+define(StaggerManager,`Stagger(`Manager',$1,$2,$3)')
+define(StaggerEmployee,`Stagger(`Employee',$1,$2,$3)')
+
 define(Manager,`
 $1:
 Employee($1,$2)
