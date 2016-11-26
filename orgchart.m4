@@ -40,7 +40,7 @@ $1($2,`$3',$4)
 move up (2 * DownLineHt)
 ')
 
-define(StaggerManager,`Stagger(`Manager',$1,$2,$3)')
+define(StaggerManager,`Stagger(`Manager',$1,$2,``$3'')')
 define(StaggerEmployee,`Stagger(`Employee',$1,$2,$3)')
 
 define(Manager,`
