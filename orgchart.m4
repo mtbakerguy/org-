@@ -7,8 +7,14 @@ define(BoxWid,`1.2')
 define(BoxHt,`0.4')
 
 
-# hacky way to center the initial box
-define(SetTop,`box invisible wid maxpswid; down')
+# setup the initial box for the chart
+define(SetTop,`
+box invisible wid maxpswid
+down
+move to center of last box
+Box($1,$2)
+TierLine(TopLineLen,0,$3)
+')
 
 define(DownLine,`
 prevlineht = lineht
