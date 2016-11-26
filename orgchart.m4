@@ -1,8 +1,8 @@
 divert(-1)
 
-#editables
+#Don't edit these -- just redefine in the calling code
 define(TopLineLen,`10')
-define(DownLineHt,`0.4')
+define(DownLineHt,`0.3')
 define(BoxWid,`1.2')
 define(BoxHt,`0.4')
 
