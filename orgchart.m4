@@ -44,7 +44,7 @@ define(StaggerManager,`Stagger(`Manager',$1,$2,``$3'')')
 define(StaggerEmployee,`Stagger(`Employee',$1,$2,$3)')
 
 define(Manager,`
-$1:
+ifdef(`MgrLabel',MgrLabel:,$1:)
 Employee($1,$2)
 divert(100)
 $3($1,$4,$5) 

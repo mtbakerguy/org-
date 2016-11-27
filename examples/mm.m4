@@ -3,7 +3,7 @@ ifdef(`TopLineLen',`',`include(`../orgchart.m4')')
 
 .PS
 
-SetTop(Disney,CEO,4)
+SetTop(Walt,CEO,4)
 Employee(Minnie,Mouse)
 Employee(Mickey,Mouse)
 Employee(Goofy,Dog)
