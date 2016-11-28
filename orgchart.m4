@@ -40,6 +40,9 @@ $1($2,`$3',$4)
 move up (2 * DownLineHt)
 ')
 
+define(Lead,Manager)
+define(StaggerLead,StaggerManager)
+
 define(StaggerManager,`Stagger(`Manager',$1,$2,``$3'')')
 define(StaggerEmployee,`Stagger(`Employee',$1,$2,$3)')
 
@@ -92,9 +95,10 @@ down
 # used with the previous TierLine macro with an associate label
 define(BuildTierLine,`
 move to $1.s
-move down BoxHt + DownLineHt;
-TierLine($3,$2,$4)
+move down BoxHt + DownLineHt
+ifelse(eval($3 == 0 || $4 == 1),1,`$4',`TierLine($3,$2,$4)')
 ')
+
 
 define(NullCall,`')
 divert(0)
