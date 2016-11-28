@@ -93,7 +93,7 @@ down
 ')
 
 # used with the previous TierLine macro with an associate label
-define(BuildTierLine,`
+define(BuildTier,`
 move to $1.s
 move down BoxHt + DownLineHt
 ifelse(eval($3 == 0 || $4 == 1),1,`$4',`TierLine($3,$2,$4)')

@@ -13,13 +13,13 @@ Manager(Snow White,Dwarf Queen,`NullCall')
 undefine(MgrLabel)
 
 # one tier down, 2 inch long horizontal line and 3 boxes underneath
-BuildTierLine(Daffy,1,2,3)
+BuildTier(Daffy,1,2,3)
 Employee(Huey,Nephew)
 Employee(Duey,Nephew)
 Employee(Louie,Nephew)
 
 # one tier down, 4 inch long horizontal line and 7 boxes underneath
-BuildTierLine(SnowWhite,1,4,7)
+BuildTier(SnowWhite,1,4,7)
 Employee(Doc)
 StaggerEmployee(Dopey)
 Employee(Bashful)

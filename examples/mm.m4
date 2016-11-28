@@ -13,13 +13,13 @@ Manager(Dory,Flaky Fish,`NullCall')
 # either a 0 in the 2nd arg or a 1 in the third triggers the behavior change
 
 # one tier down, 2 inch long horizontal line and 3 boxes underneath
-BuildTierLine(Daffy,1,2,3)
+BuildTier(Daffy,1,2,3)
 Employee(Huey,Nephew)
 Employee(Duey,Nephew)
 Employee(Louie,Nephew)
 
 
-BuildTierLine(Dory,1,1,`Employee(Nemo,Lost Fish)')
+BuildTier(Dory,1,1,`Employee(Nemo,Lost Fish)')
 
 .PE
 
